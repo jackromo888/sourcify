@@ -11,12 +11,9 @@ import {
 } from "recharts";
 import AppIconName from "../../components/AppIconName";
 import LoadingOverlay from "../../components/LoadingOverlay";
-import { REPOSITORY_URL } from "../../constants";
+import { REPOSITORY_SERVER_URL } from "../../constants";
 import { Context } from "../../Context";
 import featured from "../../featured";
-
-const FEATURE_ISSUE_URL =
-  "https://github.com/ethereum/sourcify/issues/new?assignees=ogwurujohnson%2Ckuzdogan&labels=feature%2Csupport&template=feature_project.yml&title=%5BFeature+Request%5D%3A+";
 
 type statsType = {
   [key: string]: {
@@ -138,7 +135,7 @@ const Featured = () => {
 const ChartSection = () => {
   const [stats, setStats] = useState<statsType>();
   useEffect(() => {
-    fetch(`${REPOSITORY_URL}/stats.json`)
+    fetch(`${REPOSITORY_SERVER_URL}/stats.json`)
       .then((res) => res.json())
       .then((json) => setStats(json));
   }, []);
