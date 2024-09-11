@@ -57,7 +57,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ethers": "^5.0.14",
-    "express": "^4.17.1",
+    "express": "^4.20.0",
     "express-fileupload": "^1.2.0",
     "express-session": "^1.17.1",
     "express-validator": "^6.6.1",
@@ -66,7 +66,7 @@
     "multihashes": "^3.0.1",
     "node-fetch": "2.6.6",
     "serve-index": "^1.9.1",
-    "web3": "^1.2.11"
+    "web3": "^4.0.1"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.6",
