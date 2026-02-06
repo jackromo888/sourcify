@@ -14,6 +14,6 @@ COPY --chown=node:node . ./
 RUN npm install 
 RUN npm run build
 
-FROM nginx:alpine
+FROM nginx:1.29.5-alpine3.23
 COPY --from=builder /home/node/app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
